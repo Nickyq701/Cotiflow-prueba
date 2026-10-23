@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COTIFLOW - Panel Principal</title>
+<!-- Fuente Google: Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Archivo de estilos CSS -->
+<link rel="stylesheet" href="../css/EstiloCliente.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="sidebar">
+    <div>
+        <!-- Logo Header -->
+        <div class="sidebar-header">
+        <div class="brand-icon">
+            <i data-lucide="file-text"></i>
+        </div>
+        <div class="brand-info">
+            <span class="brand-name">COTIFLOW</span>
+            <span class="brand-tagline">Cotizaciones e Inventario</span>
+        </div>
+        </div>
+
+        <!-- Menú de Navegación -->
+        <div class="menu-section">
+        <span class="menu-label">MENÚ PRINCIPAL</span>
+        <nav class="nav-list">
+            <a href="#" class="nav-item active">
+            <i data-lucide="home"></i>
+            <span>Inicio</span>
+            <span class="active-dot"></span>
+            </a>
+            <a href="#" class="nav-item">
+            <i data-lucide="mail"></i>
+            <span>Solicitudes de cotización</span>
+            </a>
+            <a href="#" class="nav-item">
+            <i data-lucide="file-check"></i>
+            <span>Cotizaciones</span>
+            </a>
+        </nav>
+        </div>
+    </div>
+
+    <!-- Perfil de usuario (Abajo) -->
+    <div class="user-profile">
+        <div class="user-avatar">JP</div>
+        <div class="user-details">
+        <span class="user-name">Juan Perez</span>
+        <span class="user-role">Cliente</span>
+        </div>
+        <button class="btn-logout" title="Cerrar sesión">
+        <i data-lucide="log-out"></i>
+        </button>
+    </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-wrapper">
+    <!-- HEADER SUPERIOR -->
+    <header class="top-header">
+        <div class="header-titles">
+        <span class="breadcrumb">Panel principal</span>
+        <h1 class="current-date">Viernes, 18 de septiembre de 2026</h1>
+        </div>
+        <div class="header-actions">
+        <div class="search-box">
+            <i data-lucide="search"></i>
+            <input type="text" placeholder="Buscar cotización o clie">
+        </div>
+        <button class="icon-btn" title="Notificaciones">
+            <i data-lucide="bell"></i>
+        </button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO DE LA PÁGINA -->
+    <main class="page-content">
+        <!-- Saludo y Botón Principal -->
+        <div class="welcome-bar">
+        <div class="welcome-text">
+            <h2>Buenos días, Juan</h2>
+            <p>Revisa la actividad comercial y continúa con tus tareas pendientes.</p>
+        </div>
+        <button class="btn-primary">
+            <i data-lucide="plus"></i> Nueva cotización
+        </button>
+        </div>
+
+        <!-- TARJETAS METRICAS (KPIs) -->
+        <div class="kpi-grid">
+        <!-- Card 1: Naranja (Pendientes) -->
+        <div class="kpi-card border-orange">
+            <div class="kpi-body">
+              <div class="kpi-content">
+                <span class="kpi-title">Solicitudes pendientes</span>
+                <span class="kpi-number">0</span>
+                <span class="kpi-subtitle">0 requieren atención hoy</span>
+              </div>
+              <div class="kpi-icon-badge">
+                <i data-lucide="mail"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Gris (Borrador) -->
+          <div class="kpi-card border-gray">
+            <div class="kpi-body">
+              <div class="kpi-content">
+                <span class="kpi-title">Cotizaciones en borrador</span>
+                <span class="kpi-number">0</span>
+                <span class="kpi-subtitle">Sin edicion</span>
+              </div>
+              <div class="kpi-icon-badge">
+                <i data-lucide="file-text"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Azul (Enviadas) -->
+          <div class="kpi-card border-blue">
+            <div class="kpi-body">
+              <div class="kpi-content">
+                <span class="kpi-title">Cotizaciones enviadas</span>
+                <span class="kpi-number">0</span>
+                <span class="kpi-subtitle">0 enviadas esta semana</span>
+              </div>
+              <div class="kpi-icon-badge">
+                <i data-lucide="file-check"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECCIÓN INFERIOR: TABLA Y SIDEBAR DERECHO -->
+        <div class="content-grid">
+          <!-- Tabla de Actividad Reciente -->
+          <div class="card table-card">
+            <div class="card-header">
+              <div>
+                <h3>Actividad reciente</h3>
+                <p>Solicitudes y cotizaciones actualizadas recientemente</p>
+              </div>
+              <a href="#" class="link-more">Ver todas <i data-lucide="arrow-right"></i></a>
+            </div>
+
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>CÓDIGO</th>
+                    <th>CLIENTE</th>
+                    <th>FECHA</th>
+                    <th>TOTAL</th>
+                    <th>ESTADO</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+          <!-- informacion de usuarios-->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Panel de Accesos Rápida e Info -->
+          <div class="right-widgets">
+            <!-- Card Accesos Rápidos -->
+            <div class="card quick-actions-card">
+              <h3>Accesos rápidos</h3>
+              <p class="widget-subtitle">Tareas frecuentes de tu rol</p>
+              
+              <div class="quick-buttons">
+                <button class="btn-quick">
+                  <i data-lucide="file-text"></i>
+                  <span>Atender solicitudes</span>
+                </button>
+                <button class="btn-quick">
+                  <i data-lucide="box"></i>
+                  <span>Consultar inventario</span>
+                </button>
+                <button class="btn-quick">
+                  <i data-lucide="users"></i>
+                  <span>Consultar clientes</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card Informática / Control -->
+            <div class="card info-box">
+              <div class="info-icon">
+                <i data-lucide="shield"></i>
+              </div>
+              <div class="info-content">
+                <h4>Control de cotización</h4>
+                <p>El inventario se valida antes de agregar cantidades. Las cotizaciones enviadas se muestran solo para consulta.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Inicializar Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

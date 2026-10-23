@@ -1,0 +1,273 @@
+/* Variables de color y tipografía */
+:root {
+  --bg-gradient: #f0f3f7;
+  --dark-blue: #1c2a3e;
+  --primary-blue: #1d4ed8;
+  --primary-blue-hover: #1e40af;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --text-light-muted: #9ca3af;
+  --input-border: #e5e7eb;
+  --card-radius: 16px;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-gradient);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+/* Tarjeta principal */
+.login-card {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  min-height: 520px;
+  background-color: #ffffff;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* --- LADO IZQUIERDO (Azul Oscuro) --- */
+.card-left {
+  flex: 1;
+  background-color: var(--dark-blue);
+  color: #ffffff;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icon-badge {
+  background-color: #2563eb;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.icon-badge i {
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.brand-subtitle {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.brand-footer {
+  margin-top: 40px;
+}
+
+.hero-headline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.hero-description {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* --- LADO DERECHO (Formulario Blanco) --- */
+.card-right {
+  flex: 1;
+  padding: 48px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.form-header {
+  margin-bottom: 28px;
+}
+
+.lock-icon-badge {
+  background-color: #eff6ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.lock-icon-badge i {
+  color: #2563eb;
+  width: 20px;
+  height: 20px;
+}
+
+.form-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.form-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Formulario e Inputs */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.form-group input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Botón de Enviar */
+.btn-submit {
+  width: 100%;
+  height: 44px;
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary-blue-hover);
+}
+
+.btn-submit i {
+  width: 18px;
+  height: 18px;
+}
+
+/* Pie del Formulario */
+.form-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.825rem;
+  color: var(--text-muted);
+}
+
+.form-footer a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Botón de Ayuda Flotante (Abajo a la derecha) */
+.help-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.help-btn:hover {
+  transform: scale(1.05);
+}
+
+.help-btn i {
+  width: 20px;
+  height: 20px;
+}
+
+/* Adaptación para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    max-width: 450px;
+  }
+
+  .card-left {
+    gap: 32px;
+  }
+}
